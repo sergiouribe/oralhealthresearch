@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OralHealthResearch.lv - 2025 Annual Impact Report</title>
+
+    <style>
+        :root {
+            --primary-blue: #0A4D8C;
+            --accent-teal: #0D9BA6;
+            --warm-gray: #F5F5F3;
+            --dark-gray: #2C2C2C;
+            --light-gray: #E8E8E6;
+            --accent-coral: #E8775E;
+            --deep-navy: #051F3E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            color: var(--dark-gray);
+            background: white;
+            line-height: 1.6;
+        }
+
+        .page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 50px;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .cover-page {
+            background: linear-gradient(135deg, var(--deep-navy) 0%, var(--primary-blue) 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 60px;
+        }
+
+        .cover-logo {
+            font-size: 18px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .cover-title {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+
+        .cover-subtitle {
+            font-size: 28px;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 80px;
+        }
+
+        .cover-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            width: 100%;
+            max-width: 900px;
+            margin-top: 60px;
+        }
+
+        .cover-stat {
+            border-left: 2px solid rgba(255,255,255,0.3);
+            padding-left: 20px;
+            text-align: left;
+        }
+
+        .cover-stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            font-family: Georgia, 'Times New Roman', serif;
+            margin-bottom: 8px;
+        }
+
+        .cover-stat-label {
+            font-size: 14px;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 40px;
+            line-height: 1.2;
+            page-break-after: avoid;
+        }
+
+        h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-top: 40px;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            page-break-after: avoid;
+            page-break-inside: avoid;
+        }
+
+        h3 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--dark-gray);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            page-break-after: avoid;
+        }
+
+        h4 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            page-break-after: avoid;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            color: var(--dark-gray);
+        }
+
+        .lead {
+            font-size: 21px;
+            line-height: 1.6;
+            color: var(--primary-blue);
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .highlight-box {
+            background: var(--warm-gray);
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid var(--accent-teal);
+            page-break-inside: avoid;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .metric-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-top: 4px solid var(--accent-teal);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            page-break-inside: avoid;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .metric-number {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            font-size: 16px;
+            color: var(--dark-gray);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .metric-detail {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-date {
+            min-width: 120px;
+            font-weight: 600;
+            color: var(--accent-teal);
+            font-size: 18px;
+        }
+
+        .timeline-content {
+            flex: 1;
+            padding-bottom: 30px;
+            border-left: 2px solid var(--light-gray);
+            padding-left: 30px;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            left: 118px;
+            width: 12px;
+            height: 12px;
+            background: var(--accent-teal);
+            border-radius: 50%;
+            margin-left: -6px;
+        }
+
+        .achievement-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .achievement-list li {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .achievement-list li:last-child {
+            border-bottom: none;
+        }
+
+        .achievement-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent-teal);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .achievement-content h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--primary-blue);
+        }
+
+        .achievement-content p {
+            font-size: 15px;
+            margin: 0;
+            color: #666;
+        }
+
+        .quote-box {
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin: 40px 0;
+            position: relative;
+            page-break-inside: avoid;
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-size: 120px;
+            font-family: Georgia, 'Times New Roman', serif;
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            opacity: 0.3;
+            color: white;
+        }
+
+        .quote-text {
+            font-size: 24px;
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.4;
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+
+        .quote-author {
+            margin-top: 20px;
+            font-size: 16px;
+            opacity: 1;
+            color: white;
+        }
+
+        .section-number {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 80px;
+            font-weight: 700;
+            color: var(--accent-coral);
+            opacity: 0.15;
+            position: absolute;
+            right: 60px;
+            top: 60px;
+            z-index: 0;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin: 40px 0;
+        }
+
+        .stat-callout {
+            background: linear-gradient(135deg, var(--accent-coral), #F4A261);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 30px 0;
+            page-break-inside: avoid;
+        }
+
+        .stat-callout-number {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .stat-callout-text {
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .footer {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 2px solid var(--light-gray);
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media print {
+            .page {
+                page-break-after: always;
+                padding: 60px 40px;
+            }
+            .cover-page {
+                page-break-after: always;
+            }
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .impact-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            border: 2px solid var(--light-gray);
+            page-break-inside: avoid;
+        }
+
+        .impact-card h4 {
+            color: var(--accent-teal);
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .book-showcase {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .book-card {
+            background: var(--warm-gray);
+            padding: 30px;
+            border-radius: 12px;
+            page-break-inside: avoid;
+        }
+
+        .book-title {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .book-meta {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .book-impact {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 3px solid var(--accent-teal);
+        }
+
+        .page-break {
+            page-break-after: always;
+        }
+
+        .publication-card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-blue);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            page-break-inside: avoid;
+        }
+
+        .publication-title {
+            font-size: 19px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .publication-authors {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        .publication-journal {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent-teal);
+            margin-bottom: 12px;
+        }
+
+        .publication-abstract {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--dark-gray);
+        }
+
+        .country-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+            padding: 25px;
+            background: var(--warm-gray);
+            border-radius: 8px;
+        }
+
+        .country-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .country-flag {
+            font-size: 24px;
+            display: inline-block;
+            min-width: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- COVER PAGE -->
+    <div class="cover-page">
+        <div class="cover-logo">OralHealthResearch.LV</div>
+        <h1 class="cover-title" style="color: #89CFF0;">2025 Annual Impact Report</h1>
+        <p class="cover-subtitle" style="color: white;">Transforming Oral Health Through Evidence & Innovation</p>
+        
+        <div class="cover-stats">
+            <div class="cover-stat">
+                <div class="cover-stat-number">12</div>
+                <div class="cover-stat-label">Peer-Reviewed Publications</div>
+            </div>
+            <div class="cover-stat">
+                <div class="cover-stat-number">30+</div>
+                <div class="cover-stat-label">International Presentations</div>
+            </div>
+            <div class="cover-stat">
+                <div class="cover-stat-number">2</div>
+                <div class="cover-stat-label">Books Published</div>
+            </div>
+            <div class="cover-stat">
+                <div class="cover-stat-number">15+</div>
+                <div class="cover-stat-label">Media Appearances</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EXECUTIVE SUMMARY -->
+    <div class="page">
+        <span class="section-number">01</span>
+        <h1>Executive Summary</h1>
+        
+        <p class="lead">2025 marked a year of exceptional growth for OralHealthResearch.lv, establishing our team as a leading voice in evidence-based pediatric dentistry, artificial intelligence applications in oral health, and health policy reform in Latvia and beyond.</p>
+
+        <div class="highlight-box">
+            <h3>Mission Context</h3>
+            <p>Latvia faces one of Europe's highest dental disease burdens: 93% of adolescents show visible tooth damage, and only 14% of 12-year-olds are caries-free. Our research addresses this crisis through patient-centered clinical trials, epidemiological studies, and AI-driven diagnostic innovations. With a population of 1.9 million, Latvia serves as an ideal laboratory for rapid national-scale implementation and international adaptation.</p>
+        </div>
+
+        <h2>Key Achievements</h2>
+
+        <p><strong>Scientific Leadership:</strong> Our team published 12 peer-reviewed articles in high-impact journals including the Journal of Dentistry, Journal of Dental Research, International Dental Journal, European Journal of Dental Education, Community Dentistry and Oral Epidemiology, JDR Clinical and Translational Research, Dentomaxillofacial Radiology, and Dental Traumatology. These 12 publications add to 28 from 2020-2024, bringing our five-year total to 40 publications in leading international journals. Additionally, we published two landmark books with Springer on AI applications in oral health care and scientific writing strategies for oral health professionals.</p>
+
+        <p><strong>Global Recognition:</strong> Associate Professor Uribe was elected to the board of the ITU/WHO/WIPO Topic Group on Dental AI (TG-Dental), joining an elite international panel developing global standards for AI in dentistry. Team members delivered keynote addresses and invited lectures across four continents, including major conferences in Turkey, Germany, Spain, Ecuador, Chile, and Brazil.</p>
+
+        <p><strong>Policy Impact:</strong> Assistant Professor Maldupa represented Latvia at the WHO Global Oral Health Meeting in Bangkok, signing the Bangkok Declaration endorsed by over 100 member states. Our research on sugar taxation and fluoride use informed the Ministry of Health Action Plan 2025-2029, with legislative consideration for 2026.</p>
+
+        <p><strong>Research Innovation:</strong> We launched EpiSMILE, Latvia's first comprehensive study on dental health and molar-incisor hypomineralisation in 6-8-year-old children. This fills a critical data gap, as previous national studies included only adolescents.</p>
+
+        <p><strong>Public Engagement:</strong> Our research reached national audiences through 15+ media appearances on Latvian television and radio, addressing sugar reduction policies, fluoride use, and minimally invasive pediatric dentistry.</p>
+
+        <div class="stat-callout">
+            <div class="stat-callout-number">70%+</div>
+            <div class="stat-callout-text">of Latvian adolescents have visible tooth damage—our research is changing this trajectory</div>
+        </div>
+
+        <p><strong>Training Excellence:</strong> We supervised three doctoral students conducting research on economic evaluation of pediatric caries management and health behavior strategies. We hosted a visiting doctoral student from University of São Paulo, strengthening our international research network.</p>
+
+        <p><strong>Open Science:</strong> We published eight open-access datasets on Zenodo and RSU Dataverse, supporting transparency, reproducibility, and global collaboration.</p>
+    </div>
+
+    <!-- SCIENTIFIC PUBLICATIONS -->
+    <div class="page page-break">
+        <span class="section-number">02</span>
+        <h1>Scientific Publications</h1>
+        <p class="lead">2025 publications demonstrate our leadership in AI ethics, dental education innovation, clinical effectiveness research, and evidence-based practice implementation.</p>
+
+        <div class="stat-callout">
+            <div class="stat-callout-number">40</div>
+            <div class="stat-callout-text">Publications in the last five years (2020-2025) in high-impact journals including Journal of Dental Research, Community Dentistry and Oral Epidemiology, Dentomaxillofacial Radiology, Dental Traumatology, European Journal of Dental Education, PLOS ONE, and International Journal of Paediatric Dentistry</div>
+        </div>
+
+        <h2>2025 Publications (12 peer-reviewed articles)</h2>
+
+        <div class="publication-card">
+            <h3 class="publication-title">The ethics and governance of large language models in dentistry: A framework for research and clinical implementation</h3>
+            <p class="publication-authors">Rokhshad R, Tichy A, Ducret M, Chaurasia A, Uribe SE, Gambelin O, Schwendicke F</p>
+            <p class="publication-journal">Journal of Dentistry. 2026 Jan;164:106187</p>
+            <p class="publication-abstract">Established a framework for ethical evaluation of large language models in dentistry through e-Delphi consensus with 105 participants. Addressed nine critical topics including data privacy, copyright, bias, fairness, transparency, and explainability. This framework provides systematic guidance for AI developers, researchers, and practitioners during development and clinical implementation.</p>
+        </div>
+
+        <div class="publication-card">
+            <h3 class="publication-title">Electronic Health Records in Dentistry: Relevance, Challenges and Policy Directions</h3>
+            <p class="publication-authors">Schwendicke F, Uribe SE, Walji M, Lam W, Tichy A</p>
+            <p class="publication-journal">International Dental Journal. 2025 Dec;75(6):103964</p>
+            <p class="publication-abstract">Examined global EHR development and dentistry's integration into national health data ecosystems. Drawing on FDI World Dental Federation's policy statements, the review highlights benefits and challenges of linking dental and medical records, presents core indicators for integrated systems, and provides practical recommendations for embedding oral health within digital health transformation.</p>
+        </div>
+
+        <div class="publication-card">
+            <h3 class="publication-title">Benefit-Cost Analysis of Noninvasive Early Childhood Caries Interventions among Latvian Children</h3>
+            <p class="publication-authors">Maldupa I, Uribe SE, Sļepcova O, Senakola E, Brinkmane A, Nguyen TM, Innes N, Mariño R</p>
+            <p class="publication-journal">JDR Clinical and Translational Research. 2025 May;12(5)</p>
+            <p class="publication-abstract">Analyzed benefit-cost of noninvasive ECC management in Latvian preschoolers over 12 months. Biannual silver diamine fluoride applications (SDF2) were most cost-effective, yielding an incremental benefit-cost ratio of -0.98. Results demonstrate implementing SDF2 in Latvia would reduce healthcare complications and costs, providing evidence for national policy implementation.</p>
+        </div>
+
+        <div class="publication-card">
+            <h3 class="publication-title">Integrating Generative AI in Dental Education: A Scoping Review of Current Practices and Recommendations</h3>
+            <p class="publication-authors">Uribe SE, Maldupa I, Schwendicke F</p>
+            <p class="publication-journal">European Journal of Dental Education. 2025 May;29(2):341-355</p>
+            <p class="publication-abstract">Identified and analyzed GenAI guidelines from 21 universities across 15 countries. Found no dental-specific guidance, presenting an opportunity to develop recommendations for academic staff. Guidelines emphasize ethical use, transparency, academic integrity, and AI misuse detection tools. Provides foundation for developing dental education-specific GenAI integration frameworks.</p>
+        </div>
+
+        <div class="publication-card">
+            <h3 class="publication-title">'How Good to Finally Have Options!' A Qualitative Analysis Exploring Parents' Perceptions of Non-Invasive and Minimally Invasive Caries Management</h3>
+            <p class="publication-authors">Stāmere U, Stars I, Innes N, Protasa N, Uribe SE, Mariño R, Maldupa I</p>
+            <p class="publication-journal">Community Dentistry and Oral Epidemiology. 2025 Sep</p>
+            <p class="publication-abstract">Examined Latvian parents' views on minimally invasive dentistry through qualitative reflexive thematic analysis. Parents value effective communication, clear information, and access to treatment options. Results highlight need for patient-centered care models that prioritize comfort, informed decision-making, and choice in pediatric dentistry.</p>
+        </div>
+
+        <div class="publication-card">
+            <h3 class="publication-title">Evaluating dental AI research papers: Key considerations for editors and reviewers</h3>
+            <p class="publication-authors">Uribe SE, Hamdan MH, Valente NA, Yamaguchi S, Umer F, Tichy A, Pauwels R, Schwendicke F</p>
+            <p class="publication-journal">Journal of Dentistry. 2025 Sep;160:105867</p>
+            <p class="publication-abstract">Provides comprehensive guidance for editors and reviewers evaluating AI research in dentistry. Addresses methodological rigor, reporting standards, ethical considerations, and clinical relevance. Critical tool for improving peer review quality and developing reliable, ethically sound AI applications in dentistry.</p>
+        </div>
+
+        <div class="publication-card">
+            <h3 class="publication-title">The influence of a deep learning tool on the performance of oral and maxillofacial radiologists in the detection of apical radiolucencies</h3>
+            <p class="publication-authors">Hamdan MH, Uribe SE, Tuzova L, Tuzoff D, Badr Z, Mol A, Tyndall DA</p>
+            <p class="publication-journal">Dentomaxillofacial Radiology. 2025 Feb;54(2):118-124</p>
+            <p class="publication-abstract">Assessed impact of deep learning model on oral radiologists' ability to detect periapical radiolucencies. AI did not significantly enhance overall diagnostic accuracy but showed potential to enhance efficiency, particularly for non-expert clinicians. Underscores complementary role of AI and critical importance of radiologists' expertise.</p>
+        </div>
+
+        <div class="publication-card">
+            <h3 class="publication-title">The Science System at the Limit: A Call to Action for Considerate Publishing</h3>
+            <p class="publication-authors">Schwendicke F, Uribe SE, Jakubovics NS</p>
+            <p class="publication-journal">Journal of Dental Research. 2025 Nov;104(12):1285-1287</p>
+            <p class="publication-abstract">Critical commentary on the sustainability of the current scientific publishing system. Addresses the exponential growth in scientific output, peer review burden, and the need for considerate publishing practices. Calls for systemic changes to ensure the quality and integrity of the scientific literature in the face of increasing publication pressures.</p>
+        </div>
+
+        <div class="publication-card">
+            <h3 class="publication-title">Clinical Efficacy of CBCT and 3D-Printed Replicas in Molar Autotransplantation: A Controlled Clinical Trial</h3>
+            <p class="publication-authors">Lejnieks M, Akota I, Jākobsone G, Neimane L, Uribe SE</p>
+            <p class="publication-journal">Dental Traumatology. 2025 Apr;41(2):161-170</p>
+            <p class="publication-abstract">Controlled clinical trial evaluating the use of CBCT and 3D-printed replicas in molar autotransplantation. Results demonstrate the clinical efficacy of digital planning and 3D-printed surgical guides in improving autotransplantation outcomes. Provides evidence for integrating digital dentistry technologies into surgical protocols for tooth transplantation.</p>
+        </div>
+
+        <div class="publication-card">
+            <h3 class="publication-title">Volumetric stability of biphasic HAp/β-TCP/collagen implants in malar augmentation: A CBCT-Based case series after orthognathic surgery</h3>
+            <p class="publication-authors">Lauskis M, Radzins O, Uribe SE, Grybauskas S, Salms G</p>
+            <p class="publication-journal">Journal of Cranio-Maxillo-Facial Surgery. 2025 Sep;53(9):1530-1537</p>
+            <p class="publication-abstract">CBCT-based case series examining volumetric stability of biphasic hydroxyapatite/β-tricalcium phosphate/collagen implants in malar augmentation following orthognathic surgery. Provides evidence on the long-term stability and clinical performance of these biomaterials in maxillofacial reconstruction.</p>
+        </div>
+
+        <div class="stat-callout">
+            <h3 class="publication-title">The Impact of Training Dental Students to Use an AI-Based Platform for Pulp Exposure Prediction Prior to Deep Caries Excavation</h3>
+            <p class="publication-authors">Ramezanzade S, Dascalu TL, Bakhshandeh A, Uribe SE, Ibragimov B, Bjørndal L</p>
+            <p class="publication-journal">International Endodontic Journal. 2025 Oct</p>
+            <p class="publication-abstract">Proof-of-concept randomized controlled trial examining AI platform training for dental students predicting pulp exposure. Demonstrates feasibility of integrating AI-based diagnostic tools into dental education and clinical training.</p>
+        </div>
+
+        <div class="publication-card">
+            <h3 class="publication-title">Should we be concerned about the use of non-fluoride toothpaste? A survey study in two European countries</h3>
+            <p class="publication-authors">Maldupa I, Narbutaite J, Stanceviciene E, Viduskalne I, Kalnina J, Kronina L, Brinkmane A, Senakola E, Uribe SE</p>
+            <p class="publication-journal">International Journal of Dental Hygiene. 2025 Feb;23(1):124-132</p>
+            <p class="publication-abstract">Revealed significant gaps in fluoride toothpaste use among families in Latvia and Lithuania, especially among children. Over one-third of Latvian families and half of Lithuanian families had at least one fluoride-free toothpaste at home. Results inform targeted interventions promoting optimal fluoride toothpaste use for caries prevention.</p>
+        </div>
+
+        <div class="stat-callout">
+            <div class="stat-callout-number">3,968</div>
+            <div class="stat-callout-text">Total citations across team publications (Google Scholar)</div>
+        </div>
+    </div>
+
+    <!-- IMPACT AT A GLANCE -->
+    <div class="page page-break">
+        <span class="section-number">03</span>
+        <h1>Impact at a Glance</h1>
+        <p class="lead">Our 2025 achievements span research excellence, policy influence, and academic training.</p>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-number">12</div>
+                <div class="metric-label">Publications</div>
+                <div class="metric-detail">PubMed-indexed peer-reviewed articles</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-number">30+</div>
+                <div class="metric-label">Conference Presentations</div>
+                <div class="metric-detail">Across 10 countries on 4 continents</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-number">8</div>
+                <div class="metric-label">Keynote Lectures</div>
+                <div class="metric-detail">At major international conferences</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-number">2</div>
+                <div class="metric-label">Books Published</div>
+                <div class="metric-detail">Springer Nature, international distribution</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-number">15+</div>
+                <div class="metric-label">Media Features</div>
+                <div class="metric-detail">National TV, radio, and press</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-number">4</div>
+                <div class="metric-label">Active Projects</div>
+                <div class="metric-detail">€1M+ in external funding</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-number">8</div>
+                <div class="metric-label">Open Datasets</div>
+                <div class="metric-detail">Published on Zenodo & RSU Dataverse</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-number">100%</div>
+                <div class="metric-label">Open Access</div>
+                <div class="metric-detail">All research freely available</div>
+            </div>
+        </div>
+
+        <h2>Geographic Reach of 2025 Activities</h2>
+        <p>Our research and presentations reached audiences across 10 countries on 4 continents:</p>
+        
+        <div class="country-list">
+            <div class="country-item">
+                <span class="country-flag">🇱🇻</span>
+                Latvia
+            </div>
+            <div class="country-item">
+                <span class="country-flag">🇪🇪</span>
+                Estonia
+            </div>
+            <div class="country-item">
+                <span class="country-flag">🇪🇸</span>
+                Spain
+            </div>
+            <div class="country-item">
+                <span class="country-flag">🇩🇪</span>
+                Germany
+            </div>
+            <div class="country-item">
+                <span class="country-flag">🇹🇷</span>
+                Turkey
+            </div>
+            <div class="country-item">
+                <span class="country-flag">🇮🇹</span>
+                Italy
+            </div>
+            <div class="country-item">
+                <span class="country-flag">🇬🇧</span>
+                United Kingdom
+            </div>
+            <div class="country-item">
+                <span class="country-flag">🇪🇨</span>
+                Ecuador
+            </div>
+            <div class="country-item">
+                <span class="country-flag">🇨🇱</span>
+                Chile
+            </div>
+            <div class="country-item">
+                <span class="country-flag">🇧🇷</span>
+                Brazil
+            </div>
+        </div>
+    </div>
+
+    <!-- RESEARCH EXCELLENCE -->
+    <div class="page page-break">
+        <span class="section-number">04</span>
+        <h1>Research Excellence</h1>
+        
+        <h2>Landmark Book Publications</h2>
+
+        <div class="book-showcase">
+            <div class="book-card">
+                <div class="book-title">Artificial Intelligence for Oral Health Care: Applications and Future Prospects</div>
+                <div class="book-meta">
+                    <strong>Editors:</strong> Schwendicke, F., Chaudhari, P.K., Dhingra, K., Uribe, S.E., Hamdan, M.<br>
+                    <strong>Publisher:</strong> Springer Nature | March 2025<br>
+                    <strong>Pages:</strong> 197 | <strong>Illustrations:</strong> 51
+                </div>
+                <p>First comprehensive guide to AI applications in dentistry, covering foundational concepts, practical applications, and ethical considerations. Features evidence-based insights into how AI is changing clinical practice.</p>
+                <div class="book-impact">
+                    <strong>Impact:</strong> Referenced in FDI World Dental Federation guidelines; adopted by dental schools for curriculum development in AI literacy.
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-title">Scientific Writing and Publication Strategies for Oral Health Professionals</div>
+                <div class="book-meta">
+                    <strong>Editors:</strong> Mariño, R., Uribe, S.E., Villavicencio-Caparó, E.<br>
+                    <strong>Publisher:</strong> Springer Nature | October 2025<br>
+                    <strong>Pages:</strong> 172 | <strong>Illustrations:</strong> 15
+                </div>
+                <p>First comprehensive guide specifically for oral health researchers on navigating modern publishing landscape. Covers predatory journals, open access strategies, and effective communication of dental research.</p>
+                <div class="book-impact">
+                    <strong>Impact:</strong> Adopted as required reading in research methodology courses across multiple dental schools in Latin America and Europe.
+                </div>
+            </div>
+        </div>
+
+        <h2>EpiSMILE: Pioneering Study on Children's Dental Health</h2>
+
+        <div class="highlight-box">
+            <h3>The First Comprehensive Study on Children's Dental Health and MIH Prevalence in Latvia</h3>
+            
+            <p>Researchers from Rīga Stradiņš University, in collaboration with the University of Latvia and with financial support from the RSU Institute of Stomatology, launched EpiSMILE—a large-scale epidemiological study. Its aim is to obtain, for the first time in Latvia, reliable data on the dental health of 6-8-year-old children, including the prevalence of molar-incisor hypomineralisation (MIH).</p>
+
+            <h4>Why This Matters</h4>
+            <p>Dental caries is well-known, but our goal is to assess its real prevalence in young children, as previous national studies have included only adolescents. MIH is an under-researched developmental enamel defect that can lead to rapid tooth breakdown and significantly impair a child's quality of life. Dentists report that its occurrence is increasing.</p>
+
+            <h4>Study Design</h4>
+            <p>The study will be conducted in several Latvian schools—this year in Rīga and its surrounding region, and, if supported, it will continue nationwide. This project differs from previous work by including not only school-based examinations carried out by specialists but also offering children with signs of severe disease the opportunity to receive in-depth consultation with paediatric dental specialists. All participating children will receive information for parents describing their child's oral health status and general recommendations for improving it.</p>
+
+            <h4>Critical Data Gaps</h4>
+            <p>To date, Latvia has not had reliable, representative data on:</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>The prevalence of dental caries in primary teeth</li>
+                <li>The frequency and severity of MIH</li>
+                <li>The effectiveness of dental care for preschool-aged children</li>
+            </ul>
+            <p style="margin-top: 15px;">Such information is essential for planning healthcare services, improving child oral health prevention, and developing effective national policies in this field.</p>
+        </div>
+
+        <h2>Conference Leadership</h2>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">January</div>
+                <div class="timeline-content">
+                    <h4>2nd IADR NOF Baltic Meeting</h4>
+                    <p>Tartu, Estonia - Three oral presentations on pediatric caries management economics and minimally invasive strategies</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">March</div>
+                <div class="timeline-content">
+                    <h4>RSU Research Week 2025</h4>
+                    <p>Riga, Latvia - Multiple presentations including third molar autotransplantation outcomes and minimally invasive dentistry adoption</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">June</div>
+                <div class="timeline-content">
+                    <h4>IADR General Session</h4>
+                    <p>Barcelona, Spain - Four presentations including AI research state, economic evaluation, and evidence certainty in oral health</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">July</div>
+                <div class="timeline-content">
+                    <h4>ITU/WHO/WIPO AI for Health - Oral Health Meeting</h4>
+                    <p>Munich, Germany - Invited presentation on reviewing AI research papers in dentistry</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">July</div>
+                <div class="timeline-content">
+                    <h4>Organisation for Caries Research Congress</h4>
+                    <p>Leeds, UK - Presentation on economic viability of minimally invasive dentistry for Latvian children</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">September</div>
+                <div class="timeline-content">
+                    <h4>European Association of Dental Public Health Congress</h4>
+                    <p>Rome, Italy - Four oral presentations covering fluoride hesitancy, dental student attitudes, and machine learning for ECC risk modeling</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">October</div>
+                <div class="timeline-content">
+                    <h4>Turkish Society of Paediatric Dentistry (KEYNOTE)</h4>
+                    <p>Antalya, Turkey - Keynote address on AI applications in pediatric dentistry, clinical implementation challenges</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">October</div>
+                <div class="timeline-content">
+                    <h4>Universidad de Valparaíso 75th Anniversary</h4>
+                    <p>Viña del Mar, Chile - Three invited lectures on AI in radiology, practice integration, and general anesthesia trends</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">November</div>
+                <div class="timeline-content">
+                    <h4>University of São Paulo & Universidade Estadual de Campinas</h4>
+                    <p>Brazil - Two invited lectures on minimally invasive caries management with SDF and toothpaste fluoride monitoring</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="stat-callout">
+            <div class="stat-callout-number">10</div>
+            <div class="stat-callout-text">Countries where our research was presented in 2025</div>
+        </div>
+    </div>
+
+    <!-- POLICY & PUBLIC INFLUENCE -->
+    <div class="page page-break">
+        <span class="section-number">05</span>
+        <h1>Policy & Public Influence</h1>
+        
+        <h2>Shaping Global AI Standards</h2>
+
+        <div class="highlight-box">
+            <h3>TG-Dental Board Membership: Global AI Leadership</h3>
+            <p>Associate Professor Sergio Uribe was elected to the board of the ITU/WHO/WIPO Topic Group on Dental AI (TG-Dental), chaired by Professor Falk Schwendicke. This Topic Group is part of the Global Initiative on Artificial Intelligence for Health launched by the World Health Organization, the International Telecommunication Union, and the World Intellectual Property Organization.</p>
+            
+            <h4>TG-Dental Mission</h4>
+            <p>TG-Dental promotes the use of AI in dental diagnostics and digital dentistry through three core focus areas:</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><strong>Benchmarking, generalizability and robustness of AI models:</strong> Ensuring that AI models for dental diagnostics are reliable, accurate and applicable in different clinical settings.</li>
+                <li><strong>Data sharing and federated learning:</strong> Enabling the secure sharing of health data to train AI systems globally without sensitive data leaving locally.</li>
+                <li><strong>Explainable AI:</strong> Developing transparent and comprehensible AI systems that are understandable for doctors and patients.</li>
+            </ul>
+
+            <h4>Goals and Vision</h4>
+            <p>TG-Dental aims to develop global standards for the use of AI in dentistry. Core objectives include identifying, testing and implementing innovative AI technologies in different countries, especially in middle and low-income countries. The group is committed to developing guidelines on the ethical use of AI, regulation and clinical evaluation of AI solutions, and promoting open-source implementations that meet the standards of the Global Initiative.</p>
+        </div>
+
+        <h2>National Health Policy</h2>
+
+        <div class="impact-grid">
+            <div class="impact-card">
+                <h4>WHO Bangkok Declaration</h4>
+                <p>Assistant Professor Maldupa represented Latvia at the WHO Global Oral Health Meeting, signing the Bangkok Declaration—endorsed by 100+ member states—asserting "no health without oral health" and promoting integration of essential dental care into primary health systems.</p>
+            </div>
+
+            <div class="impact-card">
+                <h4>Sugar Taxation Policy Brief</h4>
+                <p>Our research on excessive sugar consumption's impact on oral and systemic health informed the Ministry of Health Action Plan 2025-2029. Sugar taxation identified as priority intervention for 2026 budget consideration.</p>
+            </div>
+
+            <div class="impact-card">
+                <h4>FDI World Dental Federation AI White Paper</h4>
+                <p>Associate Professor Uribe contributed to global regulatory standards and ethical principles for AI in oral healthcare, shaping how AI applications are developed, tested, and deployed in dental practice worldwide.</p>
+            </div>
+
+            <div class="impact-card">
+                <h4>Fluoride Use Guidelines</h4>
+                <p>Co-authored national fluoride use guidelines (2014) that continue to inform clinical practice standards and public health policy in Latvia, establishing evidence-based recommendations for water fluoridation and topical fluoride products.</p>
+            </div>
+        </div>
+
+        <h2>National Media Engagement</h2>
+
+        <p>Our research reached Latvian audiences through strategic media engagement, translating complex science into actionable public health messaging.</p>
+
+        <ul class="achievement-list">
+            <li>
+                <div class="achievement-icon">LSM</div>
+                <div class="achievement-content">
+                    <h4>National Radio Campaign on Sugar Reduction</h4>
+                    <p>Three major appearances discussing excessive sugar consumption and its link to childhood obesity, diabetes, and dental disease. Emphasized 40% diabetes risk reduction through early sugar restriction.</p>
+                </div>
+            </li>
+            <li>
+                <div class="achievement-icon">TV</div>
+                <div class="achievement-content">
+                    <h4>Minimally Invasive Dentistry Feature</h4>
+                    <p>Delphi television feature on evidence-based gentle choices in pediatric dentistry, highlighting no-drill approaches and parental empowerment through informed decision-making.</p>
+                </div>
+            </li>
+            <li>
+                <div class="achievement-icon">PR</div>
+                <div class="achievement-content">
+                    <h4>Public Panel Discussion at LAMPA Festival</h4>
+                    <p>Panel on "Financing Sustainable Public Health" examining sugar taxation and policy measures to reduce unhealthy food consumption and healthcare costs in Latvia.</p>
+                </div>
+            </li>
+            <li>
+                <div class="achievement-icon">DL</div>
+                <div class="achievement-content">
+                    <h4>Delfi Discussion on Sugar & Health</h4>
+                    <p>In-depth discussion linking excessive sugar to oral health burden, childhood caries, and healthcare system costs. Evidence incorporated into policy recommendations.</p>
+                </div>
+            </li>
+        </ul>
+
+        <div class="quote-box">
+            <p class="quote-text">Countries with lower caries prevalence consistently show higher GDP, better educational outcomes, and lower chronic disease burden. Oral health predicts prosperity.</p>
+            <p class="quote-author">— From OralHealthResearch.lv mission statement</p>
+        </div>
+    </div>
+
+    <!-- TRAINING FUTURE LEADERS -->
+    <div class="page page-break">
+        <span class="section-number">06</span>
+        <h1>Training Future Leaders</h1>
+        
+        <h2>Doctoral Training Excellence</h2>
+
+        <p class="lead">We invest in the next generation of oral health researchers through rigorous PhD supervision and international collaboration.</p>
+
+        <div class="highlight-box">
+            <h3>Active PhD Students (2023-2027)</h3>
+            
+            <h4>Olga Sļepcova</h4>
+            <p><strong>Project:</strong> Economic Evaluation for the Implementation of Evidence-Based Paediatric Caries Management Strategies in Latvian Clinical Practice</p>
+            <p><strong>Supervisors:</strong> Assistant Professor Maldupa & Associate Professor Uribe</p>
+            <p><strong>2025 Output:</strong> Three international conference presentations (Estonia, Spain, UK) on cost-effectiveness of minimally invasive dentistry for Latvian children. Co-authored peer-reviewed publication on benefit-cost analysis of noninvasive ECC interventions in JDR Clinical and Translational Research. Research directly informs policy decisions on scaling pediatric dental care.</p>
+
+            <h4 style="margin-top: 30px;">Una Stāmere</h4>
+            <p><strong>Project:</strong> Health Behaviour Promoting Strategies for the Implementation of Sustainable Oral Health Care in Latvia</p>
+            <p><strong>Supervisors:</strong> Assistant Professor Maldupa & Associate Professor Uribe</p>
+            <p><strong>2025 Output:</strong> Multiple presentations on dental hygienists' perspectives on minimally invasive care adoption, fluoride hesitancy scale development, and dental student attitudes. Co-authored qualitative study on parents' perceptions of minimally invasive caries management published in Community Dentistry and Oral Epidemiology. Research addresses implementation barriers in clinical practice.</p>
+
+            <h4 style="margin-top: 30px;">Rafael Garbim (University of São Paulo)</h4>
+            <p><strong>Status:</strong> Visiting doctoral student from USP, conducting collaborative research on pediatric caries management</p>
+            <p><strong>Duration:</strong> 2025</p>
+            <p><strong>Impact:</strong> Strengthens Brazil-Latvia research collaboration and expands international network for future joint projects</p>
+        </div>
+
+        <h2>Research Training Outcomes</h2>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-number">9</div>
+                <div class="metric-label">Conference Presentations</div>
+                <div class="metric-detail">By PhD students in 2025</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-number">100%</div>
+                <div class="metric-label">International Exposure</div>
+                <div class="metric-detail">All students presented abroad</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-number">2</div>
+                <div class="metric-label">Peer-Reviewed Publications</div>
+                <div class="metric-detail">First-authored by PhD students</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-number">6</div>
+                <div class="metric-label">Countries Visited</div>
+                <div class="metric-detail">For conferences and collaborations</div>
+            </div>
+        </div>
+
+        <h2>Academic Mentorship</h2>
+
+        <p>Our supervision model emphasizes:</p>
+        <ul class="achievement-list">
+            <li>
+                <div class="achievement-icon">01</div>
+                <div class="achievement-content">
+                    <h4>International Conference Participation</h4>
+                    <p>Students present at major conferences (IADR, EADPH, ORCA) to build professional networks and receive feedback from global experts</p>
+                </div>
+            </li>
+            <li>
+                <div class="achievement-icon">02</div>
+                <div class="achievement-content">
+                    <h4>Methodological Rigor</h4>
+                    <p>Training in advanced statistical methods, systematic reviews, economic evaluation, and qualitative research approaches</p>
+                </div>
+            </li>
+            <li>
+                <div class="achievement-icon">03</div>
+                <div class="achievement-content">
+                    <h4>Policy Translation</h4>
+                    <p>Research designed to inform real-world policy decisions, ensuring students understand the path from data to impact</p>
+                </div>
+            </li>
+            <li>
+                <div class="achievement-icon">04</div>
+                <div class="achievement-content">
+                    <h4>Open Science Practices</h4>
+                    <p>Students learn data management, preregistration, and open-access publishing to maximize research transparency and reproducibility</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- LOOKING FORWARD -->
+    <div class="page page-break">
+        <span class="section-number">07</span>
+        <h1>Looking Forward: 2026 Strategic Priorities</h1>
+        
+        <p class="lead">Building on 2025's momentum, we are positioned to expand our impact across research, policy, and clinical implementation.</p>
+
+        <h2>Major Research Initiatives</h2>
+
+        <div class="impact-grid">
+            <div class="impact-card">
+                <h4>EpiDentLatvia Completion</h4>
+                <p><strong>Timeline:</strong> April 2025 - March 2026</p>
+                <p>Comprehensive mapping of oral health epidemiological profiles in Latvian children and adolescents. This recovery and resilience facility-funded project will establish the most detailed national oral health database in Latvia's history, informing policy and resource allocation for the next decade.</p>
+            </div>
+
+            <div class="impact-card">
+                <h4>IEVA Project Completion & Dissemination</h4>
+                <p><strong>Timeline:</strong> Through December 2025</p>
+                <p>Final year of implementation study on evidence-based pediatric caries management. Results will inform clinical guidelines, dental school curricula, and national treatment protocols for minimally invasive approaches.</p>
+            </div>
+
+            <div class="impact-card">
+                <h4>PhD Dissertation Defenses</h4>
+                <p><strong>Timeline:</strong> 2026-2027</p>
+                <p>Two doctoral students advancing to final stages, producing dissertations on economic evaluation and behavior change strategies. Their research will directly influence clinical practice adoption and health system financing decisions.</p>
+            </div>
+
+            <div class="impact-card">
+                <h4>EpiSMILE National Expansion</h4>
+                <p><strong>Timeline:</strong> 2026 onwards</p>
+                <p>Following successful Riga pilot, expand EpiSMILE study nationwide to obtain comprehensive data on dental caries and MIH prevalence in 6-8-year-old children across all Latvian regions.</p>
+            </div>
+        </div>
+
+        <h2>Key Conferences 2026</h2>
+
+        <ul class="achievement-list">
+            <li>
+                <div class="achievement-icon">🇱🇹</div>
+                <div class="achievement-content">
+                    <h4>Lithuanian Dental Chamber</h4>
+                    <p>May 29, 2026 - Druskininkai, Lithuania. Presenting cross-Baltic research on pediatric caries management and fluoride use patterns.</p>
+                </div>
+            </li>
+            <li>
+                <div class="achievement-icon">🇨🇿</div>
+                <div class="achievement-content">
+                    <h4>FDI World Dental Congress</h4>
+                    <p>September 4-7, 2026 - Prague, Czech Republic. Multiple presentations planned on AI in dentistry, minimally invasive approaches, and sugar reduction policy outcomes from Latvia's national implementation.</p>
+                </div>
+            </li>
+            <li>
+                <div class="achievement-icon">🇩🇪</div>
+                <div class="achievement-content">
+                    <h4>TG-Dental AI Meeting</h4>
+                    <p>2026 - Germany. As board member, Associate Professor Uribe will participate in development of global AI standards and guidelines for dental diagnostics and digital dentistry.</p>
+                </div>
+            </li>
+            <li>
+                <div class="achievement-icon">🇪🇺</div>
+                <div class="achievement-content">
+                    <h4>WHO European Region & EADPH Meeting</h4>
+                    <p>Presenting Latvia's progress on sugar taxation and fluoride policy, demonstrating rapid implementation success in small nation context. Showcasing minimally invasive dentistry adoption strategies for European dental public health community.</p>
+                </div>
+            </li>
+        </ul>
+
+        <h2>Strategic Goals</h2>
+
+        <div class="two-column">
+            <div>
+                <h3>Research Excellence</h3>
+                <ul>
+                    <li>Complete EpiDentLatvia national survey</li>
+                    <li>Publish 10+ peer-reviewed articles</li>
+                    <li>Expand EpiSMILE nationwide</li>
+                    <li>Expand international collaborations (Brazil, UK, Australia, Germany)</li>
+                </ul>
+
+                <h3>Policy Impact</h3>
+                <ul>
+                    <li>Support sugar tax legislative passage</li>
+                    <li>Update national fluoride guidelines</li>
+                    <li>Contribute to TG-Dental AI regulation framework</li>
+                    <li>Inform WHO European region oral health strategy</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Training & Capacity Building</h3>
+                <ul>
+                    <li>Advance 2 PhD students to defense stage</li>
+                    <li>Host 2 international visiting scholars</li>
+                    <li>Launch AI literacy course for clinicians</li>
+                    <li>Expand open science training programs</li>
+                </ul>
+
+                <h3>Public Engagement</h3>
+                <ul>
+                    <li>Continue public dissemination in media</li>
+                    <li>Launch public-facing EpiDentLatvia dashboard</li>
+                    <li>Develop patient education materials</li>
+                    <li>Host public science communication workshops</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="quote-box">
+            <p class="quote-text">With a population of 1.9 million, Latvia enables rapid national-scale implementation. Evidence-based interventions and new technologies like AI can be implemented and evaluated at population scale, then adapted for international contexts.</p>
+        </div>
+    </div>
+
+    <!-- CLOSING -->
+    <div class="page">
+        <h1>Thank You</h1>
+        
+        <p class="lead">Our 2025 achievements reflect the dedication of our team, the support of our funders, and the trust of our research participants and clinical partners.</p>
+
+        <div class="highlight-box">
+            <h3>Acknowledgments</h3>
+            <p>We extend our gratitude to:</p>
+            <ul style="margin-top: 20px;">
+                <li>The Latvian Council of Science for supporting the IEVA project</li>
+                <li>Recovery and Resilience Facility for funding EpiDentLatvia</li>
+                <li>European Regional Development Fund for infrastructure support</li>
+                <li>RSU Institute of Stomatology for supporting EpiSMILE</li>
+                <li>Riga Stradins University for institutional backing</li>
+                <li>Our international collaborators at University of Dundee, Cardiff University, University of Melbourne, University of São Paulo, and LMU Munich</li>
+                <li>ITU/WHO/WIPO Global Initiative on AI for Health and TG-Dental colleagues</li>
+                <li>The families and dental professionals who participated in our studies</li>
+                <li>Our editorial boards, peer reviewers, and conference organizers who elevated our work</li>
+            </ul>
+        </div>
+
+        <h2>Research Team</h2>
+        
+        <div class="two-column">
+            <div>
+                <h3>Principal Investigators</h3>
+                <p><strong>Associate Professor Sergio E. Uribe</strong><br>
+                Associate Professor, Riga Stradins University<br>
+                Visiting Professor, LMU Munich<br>
+                TG-Dental Board Member, ITU/WHO/WIPO<br>
+                ORCID: 0000-0003-0684-2025</p>
+
+                <p style="margin-top: 20px;"><strong>Assistant Professor Ilze Maldupa</strong><br>
+                Assistant Professor, Riga Stradins University<br>
+                2025 RSU Resident of the Year<br>
+                ORCID: 0000-0002-5967-956X</p>
+            </div>
+            <div>
+                <h3>Doctoral Students</h3>
+                <p><strong>Olga Sļepcova</strong><br>
+                PhD Candidate, Economic Evaluation<br>
+                ORCID: 0000-0002-8723-5464</p>
+
+                <p style="margin-top: 15px;"><strong>Una Stāmere</strong><br>
+                PhD Candidate, Health Behaviour<br>
+                ORCID: 0000-0002-7210-1463</p>
+
+                <p style="margin-top: 15px;"><strong>Rafael Garbim</strong><br>
+                Visiting Doctoral Student<br>
+                University of São Paulo</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>OralHealthResearch.lv</strong></p>
+            <p>Department of Conservative Dentistry and Oral Health<br>
+            Riga Stradins University<br>
+            Dzirciema iela 20, Rīga, Latvia</p>
+            <p style="margin-top: 20px;">Contact: sergio.uribe@rsu.lv | www.oralhealthresearch.lv</p>
+            <p style="margin-top: 40px; font-size: 12px;">© 2025 OralHealthResearch.lv | Report compiled December 2025</p>
+        </div>
+    </div>
+
+</body>
+</html>
